@@ -18,6 +18,11 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *totalAmount;
 
+@property (weak, nonatomic) IBOutlet UITextField *sharedAmount;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *perPersons;
+
+
 - (IBAction)tipPercentCanged:(UISegmentedControl *)sender;
 
 - (void)displayTotalAmount:(float)amount;

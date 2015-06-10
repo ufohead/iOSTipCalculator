@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+
 
 @interface ViewController ()
 
@@ -14,9 +16,20 @@
 
 @implementation ViewController
 
+AppDelegate *appdelegate;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+
+    [self.tipPercent setTitle:appdelegate.segmentData1 forSegmentAtIndex:0];
+    [self.tipPercent setTitle:appdelegate.segmentData2 forSegmentAtIndex:1];
+    [self.tipPercent setTitle:appdelegate.segmentData3 forSegmentAtIndex:2];
+    [self.tipPercent setTitle:appdelegate.segmentData4 forSegmentAtIndex:3];
+    [self.tipPercent setTitle:appdelegate.segmentData5 forSegmentAtIndex:4];
+    
     [self displayTheKeyboard];
 }
 
@@ -43,9 +56,15 @@
     //NSLog(@"tip percent changed: %ld", (long)sender.selectedSegmentIndex);
     [self updateDisplayedTip];
     [self updateDisplayedTotal];
+    [self updateSharedTotal];
     [self dismissTheKeyboard];
 }
-
+- (IBAction)perPersonsChanged:(UISegmentedControl *)sender {
+    [self updateDisplayedTip];
+    [self updateDisplayedTotal];
+    [self updateSharedTotal];
+    [self dismissTheKeyboard];
+}
 
 - (NSString *)formatCurrency:(float)amount {
     NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
@@ -86,13 +105,24 @@
     self.tipAmount.text = [self formatCurrency:tip];
 }
 
-
-- (void)updateDisplayedTotal {
+-(float)countingTotal {
     float amount = [self getBillAmount];
     int segment = (int)self.tipPercent.selectedSegmentIndex;
     float percent = [self calculateTipPercentageForSegment:segment];
     float tip = [self calculateTipAmount:amount percent:percent];
-    self.totalAmount.text = [self formatCurrency:tip+amount];
+    return (tip+amount);
+}
+
+- (void)updateDisplayedTotal {
+    float result = [self countingTotal];
+    self.totalAmount.text = [self formatCurrency:result];
+}
+
+- (void)updateSharedTotal {
+    float result = [self countingTotal];
+    int numbers = (int)self.perPersons.selectedSegmentIndex;
+    //NSLog(@"Numbers: %i, Persons: %i",numbers,persons);
+    self.sharedAmount.text = [self formatCurrency:(result)/(numbers+2)];
 }
 
 @end

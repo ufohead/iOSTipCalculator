@@ -14,6 +14,7 @@
 		8F0C9D481B045A9E0062D8B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0C9D471B045A9E0062D8B4 /* Images.xcassets */; };
 		8F0C9D4B1B045A9E0062D8B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0C9D491B045A9E0062D8B4 /* LaunchScreen.xib */; };
 		8F0C9D571B045A9E0062D8B4 /* TipdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C9D561B045A9E0062D8B4 /* TipdTests.m */; };
+		8F5630081B27F82600F0516F /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630071B27F82600F0516F /* ViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8F0C9D501B045A9E0062D8B4 /* TipdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0C9D551B045A9E0062D8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F0C9D561B045A9E0062D8B4 /* TipdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipdTests.m; sourceTree = "<group>"; };
+		8F5630061B27F82600F0516F /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		8F5630071B27F82600F0516F /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				8F0C9D471B045A9E0062D8B4 /* Images.xcassets */,
 				8F0C9D491B045A9E0062D8B4 /* LaunchScreen.xib */,
 				8F0C9D3A1B045A9E0062D8B4 /* Supporting Files */,
+				8F5630061B27F82600F0516F /* ViewController2.h */,
+				8F5630071B27F82600F0516F /* ViewController2.m */,
 			);
 			path = Tipd;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F0C9D431B045A9E0062D8B4 /* ViewController.m in Sources */,
+				8F5630081B27F82600F0516F /* ViewController2.m in Sources */,
 				8F0C9D401B045A9E0062D8B4 /* AppDelegate.m in Sources */,
 				8F0C9D3D1B045A9E0062D8B4 /* main.m in Sources */,
 			);
@@ -418,6 +424,7 @@
 				8F0C9D5C1B045A9E0062D8B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F0C9D5D1B045A9E0062D8B4 /* Build configuration list for PBXNativeTarget "TipdTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				8F0C9D5F1B045A9E0062D8B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,6 +12,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property(nonatomic)NSString * segmentData1;
+@property(nonatomic)NSString * segmentData2;
+@property(nonatomic)NSString * segmentData3;
+@property(nonatomic)NSString * segmentData4;
+@property(nonatomic)NSString * segmentData5;
 
 @end
 

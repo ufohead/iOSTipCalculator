@@ -14,9 +14,21 @@
 
 @implementation AppDelegate
 
+@synthesize segmentData1;
+@synthesize segmentData2;
+@synthesize segmentData3;
+@synthesize segmentData4;
+@synthesize segmentData5;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    segmentData1 = @"5%";
+    segmentData2 = @"10%";
+    segmentData3 = @"15%";
+    segmentData4 = @"20%";
+    segmentData5 = @"25%";
+    
     return YES;
 }
 
